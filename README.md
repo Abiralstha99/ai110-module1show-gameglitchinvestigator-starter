@@ -26,12 +26,27 @@ It wrote the code, ran away, and now the game is unplayable.
 ## 📝 Document Your Experience
 
 - [ ] Describe the game's purpose.
+A number guessing game built with Streamlit. The player picks a difficulty, then tries to guess a secret number within a limited number of attempts. Each wrong guess costs 5 points; guessing correctly awards a bonus that shrinks with each attempt, rewarding efficiency.
+
 - [ ] Detail which bugs you found.
+### Bugs Found
+1. Reversed hint messages in `check_guess`
+2. Entry key did nothing -  Pressing Enter in the text input triggered a page rerun but never processed the guess.
+3. New game ignored difficulty - `random.randint(1, 100)` was hardcoded, ignoring Easy (1–20) and Hard (1–50) ranges.
+4. Off-by-one in attempts - `attempts` started at `1` instead of `0`.
+5. Sidebar shows "1 and 100" regardless of the selected difficulty.
+
 - [ ] Explain what fixes you applied.
+### Fixes Applied
+1. Swapped the hint messages in `check_guess()` so each outcome returns the correct direction.
+2. Wrapped `st.text_input` and the submit button in `st.form` / `st.form_submit_button` so Enter triggers submission.
+3. Added `status`, `score`, and `history` resets inside the `if new_game:` block.
+4. Changed `random.randint(1, 100)` to `random.randint(low, high)` using the difficulty-aware range.
+5. Changed `st.session_state.attempts = 1` to `= 0`.
+6. Replaced the hardcoded string with `f"Guess a number between {low} and {high}."`.
 
 ## 📸 Demo
-
-- [ ] [Insert a screenshot of your fixed, winning game here]
+![alt text](image.png)
 
 ## 🚀 Stretch Features
 
