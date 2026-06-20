@@ -50,6 +50,7 @@ Document at least 3 bugs you found. Add rows as needed.
 ## 4. What did you learn about Streamlit and state?
 
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
+ -> Every time you click a button or type something, Streamlit reruns the whole app. State is like a variable that stores the data between those refresh phase
 ---
 
 ## 5. Looking ahead: your developer habits
@@ -58,3 +59,7 @@ Document at least 3 bugs you found. Add rows as needed.
   - This could be a testing habit, a prompting strategy, or a way you used Git.
 - What is one thing you would do differently next time you work with AI on a coding task?
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+
+- One habit is I will try to divide the bugs based on their type (logic, UI). This way I AI model will not hallucinate.
+- Next time, I will first run test-cases on AI generated code then only accept the changes
+- This project taught me that AI-generated code can look correct but hide subtle bugs; reading and testing it yourself is still necessary.
