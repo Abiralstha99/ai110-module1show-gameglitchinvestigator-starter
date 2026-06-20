@@ -107,7 +107,8 @@ if "history" not in st.session_state:
 st.subheader("Make a guess")
 
 st.info(
-    f"Guess a number between 1 and 100. "
+     # Fix : replaced hardcoded "1 and 100" with the actual range for the selected difficulty, so the hint is accurate for all difficulties
+    f"Guess a number between ${low} and ${high}. "
     f"Attempts left: {attempt_limit - st.session_state.attempts}"
 )
 
