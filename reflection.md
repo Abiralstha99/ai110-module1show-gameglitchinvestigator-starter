@@ -8,15 +8,19 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 - List at least two concrete bugs you noticed at the start  
   (for example: "the hints were backwards").
 
+- The logic is reversed, if the number is lower, it says higher and vice versa
+- The enter submit key is not working
+- Mismatch with the game state in hamburger and the home area
+
 **Bug Reproduction Log**
 
 Document at least 3 bugs you found. Add rows as needed.
 
-| Input | Expected Behavior | Actual Behavior | Console Output / Error |
-|-------|-------------------|-----------------|------------------------|
-| | | | |
-| | | | |
-| | | | |
+| Input       | Expected Behavior                | Actual Behavior                          | Console Output / Error |
+|-------------|----------------------------------|------------------------------------------|------------------------|
+| Guess of 60  Go lower                             Go Highter                                  None
+| New Game      Array cleared                       Still numbers from prev game                None
+| Guess of 80  Attempts left should be decrease     Attempts left still same                    None
 
 ---
 
